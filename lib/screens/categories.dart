@@ -18,9 +18,9 @@ class CategoriesScreen extends StatelessWidget {
         ),
         children: [
           // availableCategories.map((category)=>CategoryGridItem(category:category);
-          for(final category in availableCategories)
-            CategoryGridItem(category: category,)
-          ],
+          for (final category in availableCategories)
+            CategoryGridItem(category: category),
+        ],
       ),
     );
   }
