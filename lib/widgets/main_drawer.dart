@@ -53,7 +53,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              onSelectScreen('filters');
+              onSelectScreen('meals');
             },
           ),
           ListTile(
@@ -68,7 +68,9 @@ class MainDrawer extends StatelessWidget {
                 color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              onSelectScreen('filters');
+            },
           ),
         ],
       ),
