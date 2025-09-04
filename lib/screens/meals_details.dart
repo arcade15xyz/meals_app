@@ -17,13 +17,19 @@ class MealDetailsScreen extends ConsumerWidget {
           IconButton(
             onPressed: () {
               // using favorite meals provider for toggle funciton ".notifier" is important.
-              final wasAdded=ref
+              final wasAdded = ref
                   .read(favoriteMealsProvider.notifier)
                   .toggleMealFavoriteStatus(meal);
               ScaffoldMessenger.of(context).clearSnackBars();
-              ScaffoldMessenger.of(
-                context,
-              ).showSnackBar(SnackBar(content: Text(wasAdded?'Meal added as a favorite':'Meal removed from favorite')));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    wasAdded
+                        ? 'Meal added as a favorite'
+                        : 'Meal removed from favorite',
+                  ),
+                ),
+              );
             },
             icon: const Icon(Icons.star),
           ),
